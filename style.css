@@ -1,0 +1,143 @@
+@font-face {
+    font-family: ArianAMU;
+    src: url(ttf/arnamu.ttf);
+}
+
+/* Global resets & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  
+  /* Container to center content */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Headings */
+  h1 {
+    font-family: ArianAMU;
+    font-size: 2rem;
+    text-align: center;
+    color: #2c3e50;
+  }
+  h2 {
+    font-family: ArianAMU;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  /* Form elements */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Center dropdown */
+  #system {
+    display: block;
+    margin: 0 auto;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Input textarea aligned with left edge of container */
+  #input {
+    display: block;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* Convert button bottom-left of textarea */
+  #convert-btn {
+    display: inline-block;
+    margin: 0;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  #convert-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Output styling */
+  pre#output {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas, 'Courier New', monospace;
+    margin-top: 1.5rem;
+  }
+  
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .container {
+      padding: 0 1rem;
+    }
+  
+    #system {
+      max-width: 100%;
+    }
+  
+    /* Make textarea fill the container at narrower widths */
+    #input {
+      max-width: 100%;
+    }
+  
+    /* On small screens, make the button full-width under the textarea */
+    #convert-btn {
+      display: block;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h1 { font-size: 1.5rem; }
+    h2, h3 { font-size: 1.25rem; }
+  }
+  
