@@ -7,17 +7,17 @@ import {
 
 Promise.all([
   fetch('js/hmb.json').then(r => r.json()),
-  fetch('js/colloquial_ea.json').then(r => r.json()),
-  fetch('js/colloquial_wa.json').then(r => r.json()),
+  fetch('js/it_ca_ea.json').then(r => r.json()),
+  fetch('js/it_wa.json').then(r => r.json()),
   fetch('js/haya.json').then(r => r.json())
 ])
-.then(([hmbData, colloquialEAData, colloquialWAData, hayaData]) => {
+.then(([hmbData, intextCAEAData, intextWAData, hayaData]) => {
 
   const initialRules = {
     hmb:    [ ],
-    colloquial_ea:[ handleInitialYe, handleInitialYeVowel, 
+    it_ca_ea:[ handleInitialYe, handleInitialYeVowel, 
                     handleInitialVo, handleYev, handleInitialYi ],
-    colloquial_wa:[ handleInitialYe, handleInitialYeVowel, 
+    it_wa:[ handleInitialYe, handleInitialYeVowel, 
                     handleInitialVo, handleYev, handleInitialYi ],
     haya:         [ handleInitialYe, handleInitialYeVowel, 
                     handleInitialVo, handleYev, handleInitialYi ]
@@ -25,11 +25,11 @@ Promise.all([
 
   const midRules = {
     hmb:    [ ],
-    colloquial_ea:[
+    it_ca_ea:[
       handleMedialYeVowel, handleIu, handleUVowel, 
       handleYieVowel, handleOy, handleAyFinal
     ],
-    colloquial_wa:[
+    it_wa:[
       handleMedialYeVowel, handleIu, handleUVowel, 
       handleYieVowel, handleOy, handleAyFinal
     ],
@@ -40,8 +40,8 @@ Promise.all([
 
   const dataMap = {
     hmb: hmbData,
-    colloquial_ea: colloquialEAData,
-    colloquial_wa: colloquialWAData,
+    it_ca_ea: intextCAEAData,
+    it_wa: intextWAData,
     haya: hayaData
   };
 
